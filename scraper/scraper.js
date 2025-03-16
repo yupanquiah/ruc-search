@@ -3,7 +3,7 @@ const { standardizeKey } = require('./utils.js')
 const { SCRAPER_CONFIG } = require('./config.js')
 const fs = require('fs')
 
-const run = async (ruc) => {
+const scrape = async (ruc) => {
   const browser = await chromium.launch({ headless: true })
   const context = await browser.newContext({
     userAgent: SCRAPER_CONFIG.userAgent
@@ -80,4 +80,4 @@ const run = async (ruc) => {
   return data
 }
 
-module.exports = { run }
+module.exports = { scrape }

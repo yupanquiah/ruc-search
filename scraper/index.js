@@ -1,9 +1,9 @@
-const { run } = require('./scraper.js');
+const { scrape } = require('./scraper.js');
 
 (async () => {
   try {
     const ruc = "number"
-    const result = await run(ruc)
+    const result = await scrape(ruc)
     console.log(result)
   } catch (error) {
     console.error("❌ Error:", error.message)
